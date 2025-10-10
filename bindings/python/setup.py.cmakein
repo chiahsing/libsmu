@@ -199,7 +199,9 @@ setup(
     packages=find_packages(),
     ext_modules=extensions,
     scripts=glob.glob('${CMAKE_CURRENT_SOURCE_DIR}/bin/*'),
-    tests_require=test_requirements,
+    extras_require={
+        'test': test_requirements,
+    },
     cmdclass={
       'build_py': build_py,
       'build_ext': build_ext,
