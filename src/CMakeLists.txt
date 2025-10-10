@@ -42,7 +42,10 @@ endif()
 include_directories(SYSTEM ${LIBUSB_INCLUDE_DIRS})
 
 # only boost headers are needed, no runtime libraries
-find_package(Boost "1.53" REQUIRED)
+if(POLICY CMP0167)
+  cmake_policy(SET CMP0167 NEW)
+endif()
+find_package(Boost "1.70" REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 
 option(USE_OpenMP "Use OpenMP" ON)
