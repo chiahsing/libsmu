@@ -84,9 +84,9 @@ Session::~Session()
 
 void Session::set_off(Device* dev)
 {
+#ifdef _WIN32
 	M1000_Device *m_dev = dynamic_cast<M1000_Device*>(dev);
 	// signal usb transfer thread to exit
-#ifdef _WIN32
 	m_dev->m_usb_cv.notify_one();
 #endif
 }
