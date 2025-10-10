@@ -11,6 +11,8 @@ if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.18.0")
        cmake_policy(SET CMP0068 NEW)
 endif()
 
+set(CMAKE_CXX_STANDARD 14)
+
 # libsmu versioning
 set(LIBSMU_VERSION_MAJOR 1)
 set(LIBSMU_VERSION_MINOR 0)
