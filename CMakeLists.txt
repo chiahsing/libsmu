@@ -49,7 +49,7 @@ configure_file(${CMAKE_SOURCE_DIR}/dist/version.hpp.in
 include_directories(${CMAKE_SOURCE_DIR}/include/)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-	set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wno-unused-parameter -std=c++11 ${CMAKE_CXX_FLAGS}")
+	set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wno-unused-parameter ${CMAKE_CXX_FLAGS}")
 endif()
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG_BUILD")
 
