@@ -408,6 +408,9 @@ Device* Session::probe_device(libusb_device* usb_dev)
 				return NULL;
 			} else {
 				usb_handle = m_deviceHandles[usb_dev];
+				if (!usb_handle) {
+					return NULL;
+				}
 			}
 		}
 
